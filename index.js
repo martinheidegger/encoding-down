@@ -8,6 +8,9 @@ var Codec = require('level-codec')
 var EncodingError = require('level-errors').EncodingError
 
 module.exports = DB.default = DB
+module.exports.EncodingDOWN = DB
+module.exports.EncodingIterator = Iterator
+module.exports.EncodingBatch = Batch
 
 function DB (db, opts) {
   if (!(this instanceof DB)) return new DB(db, opts)
